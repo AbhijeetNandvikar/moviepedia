@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div className="w-full h-28 bg-gray-800  shadow-md flex items-center px-8">
       <div className="text-white font-bold text-2xl cursor-pointer">
-        Movies WIKI
+        Moviepedia
       </div>
       <div className="flex items-center">
         <div
