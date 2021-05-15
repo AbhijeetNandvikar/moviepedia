@@ -1,30 +1,13 @@
 import React from "react";
 import MoviesPage from "./MoviesPage";
 import TvShowsPage from "./TvShowsPage";
+import { globalData } from "./UserContext";
 
 const MainApp = () => {
-  const [currentPage, setCurrentPage] = react.useState("");
-
+  //   const [currentPage, setCurrentPage] = React.useState("movies");
+  let { currentPage, setCurrentPage } = React.useContext(globalData);
   return (
-    <div>
-      <div>
-        <button
-          onClick={() => {
-            setCurrentPage("movies");
-          }}
-        >
-          Movies
-        </button>
-        <button
-          onClick={() => {
-            setCurrentPage("tvShows");
-          }}
-        >
-          TV Shows
-        </button>
-      </div>
-      {currentPage === "movies" ? <MoviesPage /> : <TvShowsPage />}
-    </div>
+    <div>{currentPage === "movies" ? <MoviesPage /> : <TvShowsPage />}</div>
   );
 };
 
